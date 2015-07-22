@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2012]
+    </Comment>
+	
+	<XSIL Type="Simulate">
+
+		<Comment>
+            Output file
+        </Comment>
+        <XSIL Name="PhasemetersSC1" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,{PhaMetmesSC1}
+            </Param>
+            <Param Name="FileName" Unit="String">
+                {cname}-SC1.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+        
+        <XSIL Name="PhasemetersSC2" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,{PhaMetmesSC2}
+            </Param>
+            <Param Name="FileName" Unit="String">
+                {cname}-SC2.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+        
+        <XSIL Name="PhasemetersSC3" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,{PhaMetmesSC3}
+            </Param>
+            <Param Name="FileName" Unit="String">
+                {cname}-SC3.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+	</XSIL>
+</XSIL>

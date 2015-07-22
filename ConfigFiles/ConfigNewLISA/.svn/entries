@@ -1,0 +1,82 @@
+10
+
+dir
+530
+svn+ssh://svn.in2p3.fr/lisaf/trunk/LISACode2/ConfigFiles/ConfigNewLISA
+svn+ssh://svn.in2p3.fr/lisaf
+
+
+
+2012-11-21T21:26:13.630349Z
+520
+petiteau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c2a42b20-2f85-4899-934b-85bfea5d60ec
+
+CLISA1_P005_LPF
+dir
+
+10LISA1_P07_D25_DRS
+dir
+
+10LISA1_P2_DRS
+dir
+
+LISA3_P07_D25_DRS
+dir
+
+CLISA1_P005c_LPF
+dir
+
+10LISA1_P2c_DRS
+dir
+
+LISA
+dir
+
+SGO_Folkner1
+dir
+
+HL1_P005_LPF
+dir
+
+ToyLISALike
+dir
+
+HL1_P07_D25_DRS
+dir
+
+ELISA
+dir
+
+HL1_P2_DRS
+dir
+
+SGO_McKenzie1
+dir
+
+LISA2_P2_D28_DRS
+dir
+
+RLISA1_P005_LPF
+dir
+
+RLISA1_P2_DRS
+dir
+
+LISA1_P07_D20_DRS
+dir
+

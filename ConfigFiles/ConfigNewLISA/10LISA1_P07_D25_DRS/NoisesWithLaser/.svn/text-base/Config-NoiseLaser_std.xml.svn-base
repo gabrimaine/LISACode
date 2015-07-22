@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+	<XSIL Type="NoiseData">
+		        <XSIL Name="c1" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                980942193
+            </Param>
+        </XSIL>
+        <XSIL Name="c1s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                694454078
+            </Param>
+        </XSIL>
+        <XSIL Name="c2" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                916971914
+            </Param>
+        </XSIL>
+        <XSIL Name="c2s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                472659116
+            </Param>
+        </XSIL>
+        <XSIL Name="c3" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                909394287
+            </Param>
+        </XSIL>
+        <XSIL Name="c3s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhiteFrequency
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                1.0e-26
+            </Param>
+            <Param Name="GenerationTimeStep">
+                1.0
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+            <Param Name="PseudoRandomSeed">
+                565889653
+            </Param>
+        </XSIL>
+
+    </XSIL>
+</XSIL>

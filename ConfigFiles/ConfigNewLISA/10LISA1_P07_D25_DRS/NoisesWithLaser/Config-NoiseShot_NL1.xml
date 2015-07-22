@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+	<XSIL Type="NoiseData">
+		<Comment>
+			Shot noise defined for LISA with armlength 5 Gm , telescope 0.4 m and power laser 1 W
+			Will scale automatically with orbits, telescope and power laser
+		</Comment>
+		<XSIL Name="sn1" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="sn1s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="sn2" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="sn2s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+           <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="sn3" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param
+        </XSIL>
+        <XSIL Name="sn3s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                WhitePhase
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.16e-38
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+
+    </XSIL>
+</XSIL>

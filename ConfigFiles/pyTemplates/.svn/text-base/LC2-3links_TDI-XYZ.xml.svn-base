@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2012]
+    </Comment>
+	
+	<XSIL Type="LISACode">
+		<Comment>
+			Configure TDI generator.
+			This generator will be linked to the TDI intermediate if there are defined 
+			else scientific measurement of phasemeter buffer
+		</Comment>
+		<XSIL Name="X" Type="TDIGenerator">
+			<Param Name="GeneratorType" Type="Preregistred,specific">
+				Preregistred
+			</Param>
+			<Param Name="Interpolation" Type="Lagrange">
+				5
+			</Param>
+			<Param Name="InterpolationDelay" Type="Linear">
+				0
+			</Param>
+		</XSIL>
+		<XSIL Name="Y" Type="TDIGenerator">
+			<Param Name="GeneratorType" Type="Preregistred,specific">
+				Preregistred
+			</Param>
+			<Param Name="Interpolation" Type="Lagrange">
+				5
+			</Param>
+			<Param Name="InterpolationDelay" Type="Linear">
+				0
+			</Param>
+		</XSIL>
+		<XSIL Name="Z" Type="TDIGenerator">
+			<Param Name="GeneratorType" Type="Preregistred,specific">
+				Preregistred
+			</Param>
+			<Param Name="Interpolation" Type="Lagrange">
+				5
+			</Param>
+			<Param Name="InterpolationDelay" Type="Linear">
+				0
+			</Param>
+		</XSIL>
+    </XSIL>
+	
+	<XSIL Type="Simulate">
+		<Comment>
+            Output file
+        </Comment>
+        <XSIL Name="TDI" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,X,Y,Z
+            </Param>
+            <Param Name="FileName" Unit="String">
+                {cname}-TDI.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                XML
+            </Param>
+        </XSIL>
+	</XSIL>
+</XSIL>

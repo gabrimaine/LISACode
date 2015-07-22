@@ -1,0 +1,115 @@
+/** 
+ * @page Bibliography Bibliography
+
+
+<table border="0" cellspacing="5" cellpadding="0">
+
+
+<tr>
+<td valign="top">
+<a name="Petiteau-2008">[Petiteau &nbsp; 2008]</a>
+</td>
+<td>
+A. Petiteau, G. Auger, H. Halloin, O. Jeannin, E. Plagnol, S. Pireaux, T. Regimbau, J.Y. Vinet
+<b>LISACode: A scientific simulator of LISA</b>, Phys, Rev. D 77, 023002 (2008), http://arxiv.org/abs/0802.2023
+<br>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<a name="Arun-2009">[Nayak &nbsp; et al. 2009]</a>
+</td>
+<td>
+K.G. Arun, A. Buonanno, G. Faye and E. Oshner
+<b>igher-order spin effects in the amplitude and phase of gravitational waveforms emitted by inspiraling compact binaries: Ready-to-use gravitational waveforms </b>Phys, Rev. D 79, 104023 (2009)
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+<a name="Dhurandhar-2004">[Dhurandhar&nbsp; et al.&nbsp;2004]</a>
+</td>
+<td>
+S. V. Dhurandhar, K. Rajesh Nayak, S. Koshti, J-Y. Vinet
+<b>Fundamentals of the LISA Stable Flight Formation</b>,Class.Quant.Grav. 22 (2005) 481-488, http://xxx.lanl.gov/abs/gr-qc/0410093
+</td>
+</tr>
+
+
+<tr>
+<td valign="top">
+<a name="Dhurandhar-TDelay">[Dhurandhar&nbsp;-TDelay&nbsp;2004]</a>
+</td>
+<td>
+S. V. Dhurandhar, K. Rajesh Nayak, J-Y. Vinet
+<b>Algebraic approach to time-delay data analysis for LISA</b>,Phys.Rev. D70 (2004) 102003. http://xxx.lanl.gov/abs/gr-qc/0112059
+</td>
+</tr>
+
+
+
+<tr>
+<td valign="top">
+<a name="Nayak and all.">[Nayak&nbsp; and all.&nbsp;]</a>
+</td>
+<td>
+ NK.R. Nayak and S. Koshti and S.V. Dhurandhar and J.-Y.Vinet
+<b>On the minimum flexing of LISA </b>Classical and Quantum Gravity 23, 1763 (2006)
+</td>
+</tr>
+
+
+<tr>
+<td valign="top">
+<a name="Tinto-2004">[Plaszczynski&nbsp;2007]</a>
+</td>
+<td>
+S. Plaszczynski
+<b>Generatinglongstreamsof 1/f^alpha noise</b>,  Fluctuation and Noise Letters 7:R1, 023002 (2007), http://fr.arxiv.org/abs/astro-ph/0510081v2
+<br>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top">
+<a name="Tinto-2004">[Tinto&nbsp;2004]</a>
+</td>
+<td>
+Massimo Tinto, Sanjeev V. Dhurandhar
+<b>Time-Delay Interferometry</b>,Living Rev.Rel. 8 (2005) 4, http://xxx.lanl.gov/abs/gr-qc/0409034
+<br>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<!-- TEMPLATE
+
+<tr>
+<td valign="top">
+<a name="">[,&nbsp;]</a>
+</td>
+<td>
+
+<b></b>.
+<i></i>,
+<br>Referenced by
+
+</td>
+</tr>
+
+-->
+
+ *
+ */

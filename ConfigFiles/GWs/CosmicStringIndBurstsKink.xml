@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2014-08-22T00:00:00CEST</Param>
+    <Comment>
+       Multiple individual bursts
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="Cosmic string cusp" Type="PlaneWave">
+            <Param Name="SourceType">
+                CosmicString
+            </Param>
+            <Param Name="ListBusrtFile" Unit="ASCII">
+                /Users/petiteau/Data/ELISA/Burst/Jolly/LISACode/MyCheck/IndBurstFile_v1/5109_Burst.txt
+            </Param>
+            <Param Name="BurstType" Unit="None">
+                kink
+            </Param>
+            <Param Name="EclipticLatitude" Unit="Radian"> 
+                1.
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian"> 
+                2.
+            </Param>
+            <Param Name="Polarisation" Unit="Radian"> 
+                1.5707963267949
+            </Param>
+            <Param Name="PolarisationDelta" Unit="Radian"> 
+                3.14159265358979
+            </Param>
+            <Param Name="flow" Unit="Hz">
+                1.e-5
+            </Param>
+        </XSIL>
+    </XSIL>
+</XSIL>

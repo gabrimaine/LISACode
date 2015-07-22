@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Eric Plagnol</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-21T10:06:17PST</Param>
+    <Comment>
+        Calculating isotropic distribution of white noise sources
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="GW stochastic background pseudosource #0" Type="PlaneWave">
+            <Param Name="SourceType">
+                Stochastic
+            </Param>
+            <Param Name="EclipticColatitude" Unit="Radian">
+                0.204480198969
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian">
+                0.785398163397
+            </Param>
+            <Param Name="Polarization" Unit="Radian">
+                0
+            </Param>
+            <Param Name="PowerSpectralDensity" Unit="(f/Hz)^n/Hz">
+                0.0026042
+            </Param>
+            <Param Name="SpectralSlope" Unit="1">
+                0
+            </Param>
+            <Param Name="Flow" Unit="Hertz">
+                1e-03
+            </Param>
+            <Param Name="Fknee" Unit="Hertz">
+                0.1
+            </Param>
+            <Param Name="PseudoRandomSeed" Unit="1">
+                473233025
+            </Param>
+            <Param Name="InterpolationOrder" Unit="1">
+                1
+            </Param>
+        </XSIL>
+        <XSIL Name="GW stochastic background pseudosource #1" Type="PlaneWave">
+            <Param Name="SourceType">
+                Stochastic
+            </Param>
+            <Param Name="EclipticColatitude" Unit="Radian">
+                0.204480198969
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian">
+                2.35619449019
+            </Param>
+            <Param Name="Polarization" Unit="Radian">
+                0
+            </Param>
+            <Param Name="PowerSpectralDensity" Unit="(f/Hz)^n/Hz">
+                0.0026042
+            </Param>
+            <Param Name="SpectralSlope" Unit="1">
+                0
+            </Param>
+            <Param Name="Flow" Unit="Hertz">
+                1e-03
+            </Param>
+            <Param Name="Fknee" Unit="Hertz">
+                0.1
+            </Param>
+            <Param Name="PseudoRandomSeed" Unit="1">
+                8043904
+            </Param>
+            <Param Name="InterpolationOrder" Unit="1">
+                1
+            </Param>
+        </XSIL>
+    </XSIL>
+</XSIL>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau and Michele Vallisneri</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2010-09-30T11:39:28CEST</Param>
+    <Comment>
+        lisaXML 1.0 [M. Vallisneri, June 2006]
+    </Comment>
+    <XSIL Type="Simulate">
+
+		<Param Name="Duration" Unit="Second">
+            62914560.0
+        </Param>
+
+			
+		<Comment>
+        <Param Name="Duration" Unit="Second">
+            62914560.0
+        </Param>
+		<Param Name="Duration" Unit="Second">
+            10000.0
+        </Param>
+		<Param Name="Duration" Unit="Second">
+            604800.0
+        </Param>
+		<Param Name="Duration" Unit="Second">
+            2592000.0
+        </Param>
+		</Comment>	
+		
+		<Comment>
+            Output file
+        </Comment>
+        <XSIL Name="PhasemetersSC1" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,sci1,sci1s,tau1,tau1s
+            </Param>
+            <Param Name="FileName" Unit="String">
+                SC1_std.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+        
+        <XSIL Name="PhasemetersSC2" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,sci2,sci2s,tau2,tau2s
+            </Param>
+            <Param Name="FileName" Unit="String">
+                SC2_std.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+        
+        <XSIL Name="PhasemetersSC3" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,sci3,sci3s,tau3,tau3s
+            </Param>
+            <Param Name="FileName" Unit="String">
+                PhasemetersSC3_std.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+        <XSIL Name="TDI" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,X,Y,Z,X2
+            </Param>
+            <Param Name="FileName" Unit="String">
+                TDI_std.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+		<XSIL Name="Delays" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,D1,D2,D3,D1p,D2p,D3p
+            </Param>
+            <Param Name="FileName" Unit="String">
+                Orbits_std.txt
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                ASCII
+            </Param>
+        </XSIL>
+    </XSIL>
+</XSIL>

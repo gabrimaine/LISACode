@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Michele Vallisneri</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-23T14:40:48CEST</Param>
+    <Comment>
+        lisaXML 1.0 [M. Vallisneri, June 2006]
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="PhenomCTest" Type="SampledPlaneWave">
+            <Param Name="SourceType">
+                PhenomC
+            </Param>
+            <Param Name="EclipticLatitude" Unit="Radian">
+                1.0
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian">
+                2.0
+            </Param>
+            <XSIL Name="hp,hc" Type="TimeSeries">
+                <Param Name="TimeOffset" Unit="Second">
+                    0.0
+                </Param>
+                <Param Name="Cadence" Unit="Second">
+                    15.0
+                </Param>
+                <Param Name="Duration" Unit="Second">
+                    31457280.0
+                </Param>
+                <Array Name="t,hp,hc" Type="double" Unit="">
+                    <Dim Name="Length">
+                        2097152
+                    </Dim>
+                    <Dim Name="Records">
+                        3
+                    </Dim>
+                    <Stream Checksum="3576335700" Type="Remote" Encoding="ASCII">
+                        WORKDIR/Cfg/Data/GWs/PhenomCTest.txt
+                    </Stream>
+                </Array>
+            </XSIL>
+        </XSIL>
+    </XSIL>
+</XSIL>

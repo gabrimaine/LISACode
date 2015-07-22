@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+	<Param Name="Author">
+		Antoine Petiteau
+	</Param>
+	<Param Name="GenerationDate" Type="ISO-8601">
+		2011-04-12T10:28:11
+	</Param>
+	<XSIL Type="LISAData">
+		<XSIL Name="LISA like orbits 10 deg" Type="OrbitsFile">
+			<Param Name="TimeConversion" Unit="Second">
+					86400
+			</Param>
+			<Param Name="PositionConversion" Unit="Meter">
+					1000
+			</Param>
+			<Param Name="VelocityConversion" Unit="Meter/second">
+					1000
+			</Param>
+			<Param Name="NominalArmlength" Unit="Meter">
+					1.e9
+			</Param>
+			<Param Name="TimeShift" Unit="Second">
+					2592000.
+			</Param>
+			<XSIL Name="t,x1,y1,z1,vx1,vy1,vz1,x2,y2,z2,vx2,vy2,vz2,x3,y3,z3,vx3,vy3,vz3,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n" Type="TimeSeries">
+				<Param Name="TimeOffset" Unit="Day">
+					2459846.500000000
+				</Param>
+				<Param Name="Cadence" Unit="Day">
+					1.0
+				</Param>
+				<Param Name="Duration" Unit="Day">
+					1825.0
+				</Param>
+				<Array Name="t,x1,y1,z1,vx1,vy1,vz1,x2,y2,z2,vx2,vy2,vz2,x3,y3,z3,vx3,vy3,vz3,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n">
+					<Dim Name="Length">
+						1825
+					</Dim>
+					<Dim Name="Records">
+						37
+					</Dim>
+					<Stream Type="Remote" Checksum="0" Encoding="ASCII">
+						WORKDIR/Cfg/Data/Orbits/NGO_9-22.txt
+					</Stream>
+				</Array>
+			</XSIL>
+		</XSIL>
+	</XSIL>
+</XSIL>

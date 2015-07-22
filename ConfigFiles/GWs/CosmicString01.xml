@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2007-08-10T19:56:36CEST</Param>
+    <Comment>
+        Verification binaries form Nelemans catalogue
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="Cosmic string cusp" Type="PlaneWave">
+            <Param Name="SourceType">
+                CosmicString
+            </Param>
+            <Param Name="EclipticLatitude" Unit="Radian"> 
+                1.
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian"> 
+                2.
+            </Param>
+            <Param Name="Polarisation" Unit="Radian"> 
+                0.5
+            </Param>
+            <Param Name="flow" Unit="Hz">
+                1.e-5
+            </Param>
+            <Param Name="centralTime" Unit="Second">
+                1e6
+            </Param>
+            <Param Name="BurstType" Unit="None">
+                cusp
+            </Param>
+            <Param Name="amplitudeInit" Unit="none">
+                4.1e-19
+            </Param>
+            <Comment>
+                Not used anymore
+                <Param Name="tcosmo" Unit="Second">
+                    1e6
+                </Param>
+                <Param Name="fhigh" Unit="Hertz">
+                    0.1
+                </Param>
+            </Comment>
+        </XSIL>
+    </XSIL>
+</XSIL>

@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+	<XSIL Type="NoiseData">
+		<XSIL Name="c1" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+        <XSIL Name="c1s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+        <XSIL Name="c2" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+        <XSIL Name="c2s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+        <XSIL Name="c3" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+        <XSIL Name="c3s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                PreStabLaserNoiseFreq
+            </Param>
+			<Comment>
+				delta nu/nu_0 = (6000 pi / nu_0) (s+w_2)^2 / ( (s+w_1)^2 (s+w_3) ) 
+				PSD_0 = (6000 pi / nu_0)^2 = 4.47553e-21
+				f_i = w_i / 2 pi
+			</Comment>
+			<Param Name="PowerSpectralDensity">
+                4.47553e-21
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                1.0e-5
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                2.5e-3
+            </Param>
+            <Param Name="SpecificFrequency" Unit="Hz">
+                3.0
+            </Param>
+        </XSIL>
+
+    </XSIL>
+</XSIL>

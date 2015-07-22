@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+    <XSIL Type="LISACode">
+        <XSIL Type="Detector">
+            <XSIL Name="USO1" Type="USO">
+                <Param Name="ClockType">
+                    NoiseDeriv
+                </Param>
+                <Param Name="SCIndex" Unit="1,2,3">
+                    1
+                </Param>
+                <Param Name="Offset" Unit="Second">
+                    0.0
+                </Param>
+                <Param Name="Derivs" Unit="Second">
+                    0.0
+                </Param>
+                <XSIL Name="uc1" Type="Noise">
+                    <Param Name="SourceType">
+                        PseudoRandomNoise
+                    </Param>
+                    <Param Name="SpectralType">
+                        PinkPhase
+                    </Param>
+                    <Param Name="PowerSpectralDensity">
+                        4e-16
+                    </Param>
+                    <Param Name="Fknee">
+                        1.5
+                    </Param>
+                </XSIL>
+            </XSIL>
+            <XSIL Name="USO2" Type="USO">
+                <Param Name="ClockType">
+                    NoiseDeriv
+                </Param>
+                <Param Name="SCIndex" Unit="1,2,3">
+                    2
+                </Param>
+                <Param Name="Offset" Unit="Second">
+                    0.0
+                </Param>
+                <Param Name="Derivs" Unit="Second">
+                    0.0
+                </Param>
+                <XSIL Name="uc2" Type="Noise">
+                    <Param Name="SourceType">
+                        PseudoRandomNoise
+                    </Param>
+                    <Param Name="SpectralType">
+                        PinkPhase
+                    </Param>
+                    <Param Name="PowerSpectralDensity">
+                        4e-16
+                    </Param>
+                    <Param Name="Fknee">
+                        1.5
+                    </Param>
+                </XSIL>
+            </XSIL>
+            <XSIL Name="USO3" Type="USO">
+                <Param Name="ClockType">
+                    NoiseDeriv
+                </Param>
+                <Param Name="SCIndex" Unit="1,2,3">
+                    3
+                </Param>
+                <Param Name="Offset" Unit="Second">
+                    0.0
+                </Param>
+                <Param Name="Derivs" Unit="Second">
+                    0.0
+                </Param>
+                <XSIL Name="uc3" Type="Noise">
+                    <Param Name="SourceType">
+                        PseudoRandomNoise
+                    </Param>
+                    <Param Name="SpectralType">
+                        PinkPhase
+                    </Param>
+                    <Param Name="PowerSpectralDensity">
+                        4e-16
+                    </Param>
+                    <Param Name="Fknee">
+                        1.5
+                    </Param>
+                </XSIL>
+            </XSIL>
+        </XSIL>
+    </XSIL>
+</XSIL>
+

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+    <XSIL Type="LISACode">
+        <XSIL Type="Detector">
+        
+            
+             <Comment>
+                Configure laser 
+            </Comment>
+            
+            <XSIL Name="laser1" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            <XSIL Name="laser1s" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="laser2" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            <XSIL Name="laser2s" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="laser3" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            <XSIL Name="laser3s" Type="Laser">
+                <Param Name="Power" Unit="Watt">
+                    0.05
+                </Param>
+                <Param Name="Wavelength" Unit="Meter">
+                    1064.e-9
+                </Param>
+            </XSIL>
+            
+            <Comment>
+                Configure telescope 
+            </Comment>
+            
+            <XSIL Name="tel1" Type="Telescope">
+                <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+            <XSIL Name="tel1s" Type="Telescope">
+               <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="tel2" Type="Telescope">
+               <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+            <XSIL Name="tel2s" Type="Telescope">
+               <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="tel3" Type="Telescope">
+               <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+            <XSIL Name="tel3s" Type="Telescope">
+               <Param Name="Diameter" Unit="Meter">
+                    0.4
+                </Param>
+            </XSIL>
+        </XSIL>
+				
+    </XSIL>
+</XSIL>

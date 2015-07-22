@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+	<XSIL Type="NoiseData">
+		<XSIL Name="pm1" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="pm1s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="pm2" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="pm2s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="pm3" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+        <XSIL Name="pm3s" Type="Noise">
+            <Param Name="SourceType">
+                PseudoRandomNoise
+            </Param>
+            <Param Name="SpectralType">
+                Filter_1of_1of32
+            </Param>
+            <Param Name="PowerSpectralDensity">
+                6.00e-48
+            </Param>
+			<Param Name="Fknee">
+                0.0001
+            </Param>
+            <Param Name="InterpolationOrder">
+                7
+            </Param>
+        </XSIL>
+
+    </XSIL>
+</XSIL>

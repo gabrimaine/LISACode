@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau and Michele Vallisneri</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2010-09-30T11:39:28CEST</Param>
+    <Comment>
+        lisaXML 1.0 [M. Vallisneri, June 2006]
+    </Comment>
+    <XSIL Type="LISAData">
+        <XSIL Name="Standard LISACode" Type="LISACode_Orbits">
+            <Param Name="TimeOffset" Unit="Second">
+                0
+            </Param>
+            <Param Name="InitialPosition" Unit="Radian">
+                0
+            </Param>
+            <Param Name="InitialRotation" Unit="Radian">
+                0
+            </Param>
+            <Param Name="Armlength" Unit="Second">
+                3.33564095198152
+            </Param>
+            <Param Name="OrbitApproximation" Unit="String">
+                Eccentric
+            </Param>
+			<Comment>
+			<Param Name="OrbitApproximation" Unit="String">
+                Static
+            </Param>
+			</Comment>
+        </XSIL>
+    </XSIL>
+</XSIL>

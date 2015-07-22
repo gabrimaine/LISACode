@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author"></Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-08-19T12:17:07CEST</Param>
+    <Comment>
+        lisaXML 1.0 [M. Vallisneri, June 2006]
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="BBH binary 6 : Realization 1 src 7" Type="PlaneWave">
+            <Param Name="SourceType">
+                NRwave
+            </Param>
+			<Param Name="EclipticLatitude" Unit="Radian">
+                -0.641676546687
+            </Param>
+            <Param Name="EclipticLongitude" Unit="Radian">
+                5.63928938132
+            </Param>
+            <Param Name="Polarization" Unit="Radian">
+                0.54506422329
+            </Param>
+			<Param Name="TotalMass" Unit="SolarMass">
+                247689.70975
+            </Param>
+			 <Param Name="CoalescenceTime" Unit="Second">
+                8258.01934758
+            </Param>
+			 <Param Name="Distance" Unit="Parsec">
+				90042764446.7
+            </Param>
+            <Param Name="PolarAngleDetectorInSrc" Unit="Radian">
+                1.16050749262
+            </Param>
+            <Param Name="AzimuthalAngleDetectorInSrc" Unit="Radian">
+                3.13532658925
+            </Param>
+            <Param Name="FileName" Unit="None">
+                /Users/petiteau/Data/spinbbh/NR/TestSNRFIM/Test1/NRdata.txt
+            </Param>
+        </XSIL>
+    </XSIL>
+</XSIL>

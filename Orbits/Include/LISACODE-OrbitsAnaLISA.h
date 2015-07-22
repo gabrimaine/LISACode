@@ -1,0 +1,148 @@
+/*
+ *  LISACODE-OrbitsAnaLISA.h
+ *  LC20
+ *
+ *  Created by Antoine Petiteau on 10/04/11.
+ *  Copyright 2011 Max-Planck-Institut für Gravitationsphysik - Albert Einstein Institute. All rights reserved.
+ *
+ */
+
+
+
+/** \ingroup Orbits Orbits
+ * \{
+ */
+
+
+#ifndef __LCORBITSANALISA_H
+#define __LCORBITSANALISA_H
+
+#include "LISACODE-Orbits.h"
+#include "ezxml.h"
+
+
+/** \brief Class computing the analytic orbits of spacecrafts.
+ * \author A. Petiteau
+ * \version 2.0
+ * \date 10/04/2011
+ *
+ * This class computes the analytic orbits of spacecrafts.
+ * 
+ *
+ */
+class LCOrbitsAnaLISA : public LCOrbits
+{
+protected:
+	
+	/*! \brief Orbital parameter. */
+	double alpha;
+	
+	/*! \brief Orbital angular constant. */	
+	double nu;
+	
+	/*! \brief Orbital constant. */	
+	double tmu;
+	
+	/*! \brief Orbital constant. */	
+	double cmu;
+	
+	/*! \brief Orbital constant. */	
+	double smu;
+	
+	/*! \brief Eccentricity. */
+	double e;
+	
+	/*! \brief Eccentricity derived constant. */
+	double sqrtee;
+
+	
+	
+	
+	/* \brief Satellites phase. */	
+	std::vector<double> rot;
+	
+	/*! \brief Satellites phase cosinus. */	
+	std::vector<double> crot;
+	
+	/*! \brief Satellites phase sinus. */	
+	std::vector<double> srot;	
+	
+	
+	/************ Variables use in initialization but not after ********** */
+	
+    /*! \brief Phase between satellites : constant,  \f$ arot=\frac{2 \cdot \pi}{3} \f$. */	
+	double arot;
+    
+	/** \brief Initial rotation (radians) */
+	double rot0;
+	
+	/** \brief Distance between the LISA barycenter and the Sun. */
+	double Rgc;
+	
+	/** \brief Angular velocity of the LISA barycenter around the Sun. */
+	double omega;
+	
+public:
+	
+	/*************** Constructor ***************/
+	
+	/*! \brief Default constructor */
+	LCOrbitsAnaLISA();
+	
+	/*! \brief Standard constructor */
+	LCOrbitsAnaLISA(LCTools * MT);
+	
+	
+	/*! \brief Destructor */
+	~LCOrbitsAnaLISA();
+	
+	
+	/***************  Required methods (to be present in derived classes)  ***************/
+	
+	/*! \brief Initialization at NULL */
+	void initNULL(bool CleanMem);
+	
+	/*! \brief Configuration from the xml bloc : <XSIL Name="..." Type="Orbits"> ... </XSIL> */
+	void config(ezxml_t noisexmlbloc);
+	
+	/*! \brief Configuration of individual parameter */
+	void config(int iParam, double ParamVal);
+	
+	/*! \brief Initialization */
+	void init();
+	
+	/*! \brief Specific computation of the travel time  */
+	double ArmSpecific(int em, int rec, double trec);
+	
+	/*! \brief Returns the position of the spacecraft in the barycentric frame for the time t (s) as argument and spacecraft number (1, 2 or 3) */
+	LCVector position(int iSC, double t);
+	
+	/*! \brief  Returns the position of the spacecraft in the barycentric frame for the time t (s) as argument and spacecraft number (1, 2 or 3) */
+	LCVector velocity(int iSC, double t);
+	
+	/*! \brief Display information */ 
+	void DispInfo(char * BTab);
+	
+	/***************  Local methods  ***************/
+	
+	/**********  Configuration methods  **********/
+	
+	/**********  Linking and initalization methods  **********/
+	
+	/**********  Access methods  **********/
+	
+	/**********  Running methods  **********/
+	
+	/**********  Others methods  **********/
+	
+	/*! \brief  Solve the equation for excentric anomaly : \f$ E_i(t) - e \ \sin{E_i(t)} = \psi_i \f$ */
+	void exanom(int iSC, double ts, double &cpsi, double &spsi);
+	
+	
+};
+
+#endif //__LCORBITSANALISA_H
+
+/**\}*/
+
+// end of LISACODE-OrbitsAnaLISA.h

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2007-08-10T19:56:36CEST</Param>
+    <Comment>
+       Verification binaries form Nelemans catalogue
+    </Comment>
+    <XSIL Type="SourceData">
+        <XSIL Name="Verification binaries #26 : id=-28 :  SDSS J2119-0018 " Type="PlaneWave">
+            <Param Name="SourceType">
+                GalacticBinaryV 
+            </Param>
+			<Param Name="Mass1" Unit="SolarMass">
+                1.04
+            </Param>
+            <Param Name="Mass2" Unit="SolarMass">
+                0.17
+            </Param>
+            <Param Name="Period" Unit="Second">
+                7497
+            </Param>
+			<Param Name="PeriodDerivative" Unit="Second/Second">
+                0
+            </Param>
+            <Param Name="Eccentricity" Unit="None">
+                0
+            </Param>
+			<Param Name="Inclination" Unit="Degree">
+                60
+            </Param>
+			<Param Name="EclipticLongitude" Unit="Degree">
+                51.58
+            </Param>
+            <Param Name="EclipticLatitude" Unit="Degree">
+                -32.54
+            </Param>
+            <Param Name="Distance" Unit="KiloParsec">
+                2.5
+            </Param>
+            <Param Name="Polarization" Unit="Radian">
+                0.0
+            </Param>
+            <Param Name="InitialPhase" Unit="Radian">
+                0.0
+            </Param>
+        </XSIL>
+	</XSIL>
+</XSIL>

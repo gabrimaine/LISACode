@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2012]
+    </Comment>
+	
+	<XSIL Type="LISACode">
+        <XSIL Type="Detector">
+			
+            <Comment>
+                Configure optical benches 
+            </Comment>
+            <XSIL Name="sci1" Type="OpticalBenchPhasemeter">
+                <Param Name="OpticalBenchType" Unit="None">
+                    Std2002
+                </Param>
+                <Param Name="FilterType" Unit="None">
+                    Standard
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="sci1s" Type="OpticalBenchPhasemeter">
+                <Param Name="OpticalBenchType" Unit="None">
+                    Std2002
+                </Param>
+                <Param Name="FilterType" Unit="None">
+                    Standard
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="sci2s" Type="OpticalBenchPhasemeter">
+                <Param Name="OpticalBenchType" Unit="None">
+                    Std2002
+                </Param>
+                <Param Name="FilterType" Unit="None">
+                    Standard
+                </Param>
+            </XSIL>
+            
+            <XSIL Name="sci3" Type="OpticalBenchPhasemeter">
+                <Param Name="OpticalBenchType" Unit="None">
+                    Std2002
+                </Param>
+                <Param Name="FilterType" Unit="None">
+                    Standard
+                </Param>
+            </XSIL>
+			
+		</XSIL>
+	</XSIL>
+	
+</XSIL>

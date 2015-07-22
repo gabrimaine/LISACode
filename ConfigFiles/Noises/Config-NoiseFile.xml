@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2013]
+    </Comment>
+	<XSIL Type="NoiseData">
+		<XSIL Name="op1" Type="Noise">
+            <Param Name="SourceType">
+                DataFile
+            </Param>
+            <Param Name="DataType">
+                Length
+            </Param>
+            <Param Name="IndexRecord" Unit="1,...,Max-1(TimeExcluded)">
+                1
+            </Param>
+            <Param Name="StartShift" Unit="Second">
+                    0.0
+            </Param>
+            <XSIL Name="t,noise" Type="TimeSeries">
+                <Param Name="TimeOffset" Unit="Second">
+                    0.0
+                </Param>
+                <Param Name="Cadence" Unit="Second">
+                    10.0
+                </Param>
+                <Param Name="Duration" Unit="Second">
+                    100000.0
+                </Param>
+                <Array Name="t,noise" Type="double" Unit="">
+                    <Dim Name="Length">
+                        10000
+                    </Dim>
+                    <Dim Name="Records">
+                        2
+                    </Dim>
+                    <Stream Checksum="0000000000" Type="Remote" Encoding="ASCII">
+                        WORKDIR/Cfg/Data/Noise/eLISA_dx_Test_10000.txt
+                    </Stream>
+                </Array>
+            </XSIL>
+        </XSIL>
+    </XSIL>
+</XSIL>

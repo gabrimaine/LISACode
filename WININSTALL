@@ -1,0 +1,83 @@
+One specific solution working :
+===============================
+
+1. Download and install gsl at : http://gnuwin32.sourceforge.net/packages/gsl.htm
+
+2. In the directory MYINSTALDIR you want to install tools, create directories MYINSTALDIR/lib and MYINSTALDIR/include
+
+3. Download fftw-3.3.3-dll32.zip from http://www.fftw.org/install/windows.html
+
+4. Copy MYINSTALDIR/include/fftw3.h in the directory include 
+
+5. Copy MYINSTALDIR/lib/fftw3-3.a and MYINSTALDIR/lib/fftw3-3.dll in the directory lib 
+
+6. Open Code Blocks and create a new "Console Application" project
+
+7. In "Project -> Build Options -> onglet Linker Settings -> Link libraries", add :
+C:\Program Files\GnuWin32\lib\libgsl.a 
+C:\Program Files\GnuWin32\lib\libgsl.dll.a 
+C:\Program Files\GnuWin32\lib\libgslcblas.a
+C:\Program Files\GnuWin32\lib\libgslcblas.dll.a
+MYINSTALDIR/lib/fftw3-3.a
+
+8. in "Project -> Build Options -> Search Directories -> Compiler", add :
+C:\Program Files\GnuWin32\include
+MYINSTALDIR/inlcude
+
+9. "Project -> Build Options -> Search Directories -> Linker", add :
+MYINSTALDIR/lib
+
+10. Untar the distribution of LISACode
+
+11. Add manually in recursive mode all the subdirectory "Src" and the "Main/Exe/Run.cpp"
+
+12. In "Project -> Build Options -> Search Directories -> Compiler", add all subdirectories "Include"
+
+13. In "Project -> Build Options -> Compiler settings -> Other options" add "-D EZXML_NOMMAP"
+
+14. Compile !
+ 
+
+
+
+
+
+
+
+
+
+Old way (not tried for the new version) :
+=========================================
+
+Install MINGW
+
+
+Our local setup is the following :
+In home directory we have src and bin directory.
+
+
+Install fftw3 :
+---------------
+1. Download the last version of fftw3 (the test has be done with fftw-3.3.3).
+2. Uncompress it and put it in $HOME/src/fftw
+3. Go to $HOME/src/fftw/fftw3.X 
+4. Configure :
+	./configure --prefix=$HOME 
+5. Compile :
+	make 
+	make install
+
+
+Install gsl :
+-------------
+1. Download the last version of gsl (the test has be done with gsl-1.15).
+2. Uncompress it and put it in $HOME/src/gsl
+3. Go to $HOME/src/gsl/gsl-1.X 
+4. Configure :
+	./configure --prefix=$HOME 
+5. Compile :
+	make 
+	make install
+
+
+

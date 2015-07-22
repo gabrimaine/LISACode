@@ -1,0 +1,256 @@
+/*
+ *  LISACODE-Detector.h
+ *  LC20
+ *
+ *  Created by Antoine Petiteau on 13/04/11.
+ *  Copyright 2011 Max-Planck-Institut für Gravitationsphysik - Albert Einstein Institute. All rights reserved.
+ *
+ */
+
+
+
+/** \defgroup detector detector
+ * This group contains things related to the detector description
+ * \{
+ */
+
+
+#ifndef __LCDETECTOR_H
+#define __LCDETECTOR_H
+
+#include "LISACODE-Tools.h"
+#include "ezxml.h"
+#include "LISACODE-GW.h"
+#include "LISACODE-ArmResp.h"
+#include "LISACODE-Noise.h"
+#include "LISACODE-NoiseWhite.h"
+#include "LISACODE-NoiseFilter.h"
+#include "LISACODE-NoiseFile.h"
+#include "LISACODE-Orbits.h"
+#include "LISACODE-OrbitsAnaLISA.h"
+#include "LISACODE-OrbitsAnaMLDC.h"
+#include "LISACODE-OrbitsData.h"
+#include "LISACODE-USO.h"
+#include "LISACODE-USONoiseDeriv.h"
+#include "LISACODE-OBPM.h"
+#include "LISACODE-OBPMStd2002.h"
+#include "LISACODE-OBPMStd2010.h"
+#include "LISACODE-OBPMOcta1.h"
+
+/*! Structure containing the parameters of a laser */
+struct LCLaser {
+	//! Index of spacecraft
+	int iSC;
+	
+	//! Direction flag : Direction flag :  0 if the optical bench is in the direct direction (1->2->3->1), else 1 (1->3->2->1)
+	int IndirectDir;
+	
+	//! Power
+	double power;
+	
+	//! Frequency
+	double freq;
+};
+
+
+/*! Structure containing the parameters of a telescope */
+struct LCTelescope {
+	//! Index of local spacecraft
+	int iSC;
+	
+	//! Direction flag : Direction flag :  0 if the optical bench is in the direct direction (1->2->3->1), else 1 (1->3->2->1)
+	int IndirectDir;
+	
+	//! Index of link spacecraft (emitter)
+	int iSCLink;
+	
+	//! Diameter [fix]
+	double diameter;
+	
+	//! Factor which multiply the shot noise : \f$ \sqrt(PSD_{SN}) = \sqrt(PSD_{SN,ref}) \times Fact \f$ with \f$ Fact = PreFact \times t_{travel} \f$
+	double FactShotNoise;
+	
+	//! Pre-computed factor which multiply the shot noise and doesn't change during the simulation : need to by multiplied by travel time for obtaining full factor : \f$ Fact = PreFact \times t_{arm} \f$ with \f$ PreFact = 8740942. {\lambda_laser^{3/2} \over \sqrt{P_{laser}} D^2_telescope } \f$
+	double PreFactShotNoise;
+	
+};
+
+
+
+/** \brief Base class for managing the detector.
+ * \author A. Petiteau
+ * \version 2.0
+ * \date 10/04/2011
+ *
+ * This class is the base class for managing the detector.
+ * 
+ *
+ */
+class LCDetector
+{
+protected:
+	
+	/** \brief Pointer on toolbox class */
+	LCTools * MT;
+	
+	/** \brief Pointer on module computing arm response to GWs (local allocation) */
+	LCArmResp * ArmGW;
+	
+	/** \brief List of all noises */
+	LCNoise ** Noises;
+	
+	/** \brief Number of noises */
+	int NNoises;
+	
+	/** \brief List of pointer on optical bench and phasemeter */
+	LCOBPM ** Measures;
+	
+	/** \brief Number of pointer on optical bench and phasemeter */
+	int NMeasures;
+	
+	/** \brief List of pointer on clocks */
+	LCUSO ** Clocks;
+	
+	/** \brief Number of pointer optical bench and phasemeter */
+	int NClocks;
+	
+	/** \brief List of pointer on lasers */
+	LCLaser ** Lasers;
+	
+	/** \brief Number of pointer on lasers */
+	int NLasers;
+	
+	/** \brief List of pointer on telescope
+	 *	index in list	:	iSC
+	 *	0 <- 4			:	1 <- 2'
+	 *	1 <- 5			:	2 <- 3'
+	 *	2 <- 3			:	3 <- 1'
+	 *	3 <- 2			:	1' <- 3
+	 *	4 <- 0			:	2' <- 1
+	 *	5 <- 1			:	3' <- 2
+	 */
+	LCTelescope ** Telesc;
+	
+	/** \brief Number of pointer on telescope */
+	int NTelesc;
+	
+	/** \brief Pointer on orbits */
+	LCOrbits * Orb;
+	
+	/** \brief Time offset */
+	double t0;
+	
+	/** \brief Physical time step (only use in the detector and its subsystems (Noises, USO) )*/
+	double dtPhy;
+	
+	/** \brief Measurements time step (copy from LISACode class) */
+	double dtMes;
+	
+	/** \brief Duration of the storage for one delay (copy from LISACode class) */
+	double tStoreDelay;
+	
+	/** \brief Number of data in phasemeter measurements serie [given by LISACode] */
+	int NDataPha;
+	
+	/** \brief True if we want to update the factor to apply on shot noise at each step. If false, it is just computed one time during initialization using the nominal travel time */
+	bool UpdateShotNoise;
+	
+	/** \brief Noise interpolation : not required but if not undefined (UND), it will be used */
+	INTERP  NoiseInterp;
+	
+	/** \brief Noise interpolation value  */
+	double NoiseInterpVal;
+
+	
+public:
+	
+	/*************** Constructor ***************/
+	
+	/*! \brief Default constructor */
+	LCDetector();
+	
+	/*! \brief Standard constructor */
+	LCDetector(LCTools * MT);
+	
+	
+	/*! \brief Destructor */
+	~LCDetector();
+	
+	
+	/*! \brief Initialization of all at NULL */
+	void initNULLBase(bool CleanMem);
+	
+	/**********  Configuration methods  **********/
+	
+	/*! \brief Configuration of the detector */
+	void configDetector(ezxml_t xmlbloc);
+	
+	/*! \brief Configuration of noises from a bloc : <XSIL Name="..." Type="NoiseData"> ... </XSIL> */
+	void configNoise(ezxml_t xmlbloc);
+	
+	/*! \brief Configuration of clocks (ultra stable oscillator) from a bloc : <XSIL Name="..." Type="???"> ... </XSIL> */
+	void configClock(ezxml_t xmlbloc);
+	
+	/*! \brief Configuration of measurement system (optical bench + photodiode + phasemeter) from a bloc : <XSIL Name="..." Type="???"> ... </XSIL> */
+	void configMeasure(ezxml_t xmlbloc);
+	
+	/*! \brief Configuration of laser  from a bloc : <XSIL Name="..." Type="Laser"> ... </XSIL> */
+	void configLaser(ezxml_t xmlbloc);
+	
+	/*! \brief Configuration of laser  from a bloc : <XSIL Name="..." Type="Telescope"> ... </XSIL> */
+	void configTelescope(ezxml_t xmlbloc);
+	
+	
+	/**********  Linking and initalization methods  **********/
+	
+	
+	/*! \brief Link the orbits to the detector */
+	void LinkOrbits(LCOrbits * Orb_n) { Orb = Orb_n; } ;
+	
+	/*! \brief Link gravitaional wave to the module computing arm response of the detector to GWs . WARINING : Need to link the orbit before ! */
+	void LinkGWs( LCGW ** LCGWs, int NGWs ) ;
+	
+	/*! \brief Initialization */
+	void init();
+	
+	/*! Link the output of the measurement system to the pointer on output data 
+	 *	@param[in]	pOut	
+	 *	@param[in]	ObsName	
+	 *	@return		False if output has been found 
+	 */ 
+	bool LinkMes2Output(double * pOut, char * ObsName);
+	
+	/**********  Access methods  **********/
+	
+	void setTimeInfo( double t0_n, double dtMes_n, double tStoreDelay_n, int NDataPha_n);
+	
+	void setdtPhy(double dtPhy_n) {dtPhy = dtPhy_n;};
+	
+	/*! \brief Link measurements of the phasmeter which have the correct position and the same first nchar characters of Name_cmp with the Name and return true if there are the same. */
+	LCSerie2 * LinkPhaMes(int iSC_cmp, int IndirectDir_cmp, const char * Name_cmp, int nchar); 
+	
+	
+	/**********  Running methods  **********/
+	
+	/*! \brief Run one step */
+	void RunStep(double t);
+	
+	/*! \brief Compute the factor to multiply the shot noise */
+	void ComputeFactShotNoise(int iR, double tGlobal);
+	
+	/**********  Others methods  **********/
+	
+	/*! \brief Pre computation of factor for shot noise */
+	void PreComputeFactShotNoise();
+	
+	/*! \brief Display information */ 
+	void DispInfo(char * BTab);
+	
+	
+};
+
+#endif //__LCDETECTOR_H
+
+/**\}*/
+
+// end of LISACODE-Detector.h

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2012]
+    </Comment>
+	
+	<XSIL Type="Simulate">
+
+		<Comment>
+            Output file
+        </Comment>
+        <XSIL Name="PhasemetersSC" Type="Output">
+            <Param Name="Observables" Unit="t,SC[i],TDI,[individual]">
+                t,{PhaMetmesSC}
+            </Param>
+            <Param Name="FileName" Unit="String">
+                {outname}
+            </Param>
+            <Param Name="FileType" Unit="ASCII,Binary,XML">
+                {outdatatype}
+            </Param>
+        </XSIL>
+        
+	</XSIL>
+</XSIL>

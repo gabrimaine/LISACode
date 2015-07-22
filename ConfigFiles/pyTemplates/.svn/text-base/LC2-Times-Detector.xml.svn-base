@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE XSIL SYSTEM "http://www.vallis.org/lisa-xml.dtd">
+<?xml-stylesheet type="text/xsl" href="lisa-xml.xsl"?>
+<XSIL>
+    <Param Name="Author">Antoine Petiteau</Param>
+    <Param Name="GenerationDate" Type="ISO-8601">2011-04-13T14:00:00CEST</Param>
+    <Comment>
+        lisaXML 1.1 [A. Petiteau (based on M. Vallisneri), April 2011]
+    </Comment>
+	
+	<XSIL Type="Simulate">
+		<Param Name="Cadence" Unit="Second">
+			{cadence}
+		</Param>
+	
+		<Param Name="Duration" Unit="Second">
+            {duration}
+		</Param>
+	
+	</XSIL>
+
+	
+	<XSIL Type="LISACode">
+        <XSIL Type="Detector">
+            <Param Name="StepPhysic" Unit="Second">
+                {cadencePhys}
+            </Param>
+			<Param Name="UpdateShotNoise" Unit="On/Off">
+                {UpdateShotNoise}
+            </Param>
+			
+			<Param Name="InterpolationNoises" Type="Lagrange">
+                {InterpolationNoises}
+            </Param>
+		</XSIL>
+	</XSIL>
+</XSIL>

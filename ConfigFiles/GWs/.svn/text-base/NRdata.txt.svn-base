@@ -1,0 +1,11 @@
+Name = Q1D9A
+q = 1.
+a1 = 0.6
+a2 = 0.66
+thS1 = 0.13
+thS2 = 0.13
+phS1 = 0.
+phS2 = 0.4
+Phi0 = 0.
+Harmonics
+2 2 /Users/petiteau/Data/spinbbh/NR/DataFrank/Q1hyb22.dat
