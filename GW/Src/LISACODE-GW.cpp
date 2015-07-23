@@ -16,7 +16,7 @@
 
 LCGW::LCGW()
 {
-#	MT = new LCTools;
+	MT = new LCTools;
 	MT->LocTools = true;
 #ifdef _DEBUG_GW_    
     DEBUGfCheck = NULL;
